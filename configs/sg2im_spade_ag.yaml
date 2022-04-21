@@ -1,0 +1,39 @@
+# Sg2im with SPADE and multi scale discriminator
+# Trained on Action genome dataset
+
+seed: 1
+gpu: 0
+
+# DATA OPTIONS
+dataset: ag
+
+ag_image_dir: /path_to_extracted_charade_frames/charade_frames
+ag_train_annotation_json: /path_to_ag_labels/AG_labels/train_annots.json
+ag_val_annotation_json: /path_to_ag_labels/AG_labels/val_annots.json
+ag_obj_classes_file: /path_to_ag_labels/AG_labels/object_classes.txt
+ag_rel_classes_file: /path_to_ag_labels/AG_labels/relationship_classes.txt
+
+coco_no_mask: True
+output_dir: checkpoints_sg2im_spade_ag/
+num_iterations: 250000
+log_dir: runs/sg2im_spade_ag
+restore_from_checkpoint: 1
+batch_size: 8
+image_size:  !!python/tuple [128, 256]
+checkpoint_every: 2000
+layout_size: !!python/tuple [32, 32]
+
+# Losses weights
+percept_weight: 5
+
+# Spade options
+spade_gen_blocks: True
+multi_discriminator: True
+discriminator_loss_weight: 1
+d_obj_weight: 0.1
+ac_loss_weight: 0.1
+d_img_weight: 1
+l1_pixel_loss_weight: 1
+bbox_pred_loss_weight: 50
+
+path_to_tmp_fid: fid/sg2im_spade_ag

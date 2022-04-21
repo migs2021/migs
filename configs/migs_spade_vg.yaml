@@ -1,0 +1,43 @@
+# Meta learning on AG with SPADE generator and multi-scale discriminator
+
+seed: 5
+gpu: 0
+meta: 1
+
+# DATA OPTIONS
+dataset: vg
+
+ag_image_dir: '/media/azadef/MyHDD/Code/GANs/SIMSG/sg2im/datasets/vg'
+meta_base_dst_path: '/media/azadef/MyHDD/Code/GANs/SIMSG/sg2im/datasets/vg'
+# ag_obj_classes_file: /path_to_ag_labels/AG_labels/object_classes.txt
+# ag_rel_classes_file: /path_to_ag_labels/AG_labels/relationship_classes.txt
+
+coco_no_mask: True
+output_dir: checkpoints_migs_spade_vg/
+num_iterations: 40000
+log_dir: runs/migs_spade_vg
+path_to_tmp_fid: fid/migs_spade_vg
+restore_from_checkpoint: 1
+batch_size: 50 #8
+image_size:  !!python/tuple [64, 64]
+checkpoint_every: 200
+eval_every: 200
+layout_size: !!python/tuple [32, 32]
+
+# Losses weights
+percept_weight: 5
+
+# Spade options
+spade_gen_blocks: True
+multi_discriminator: True
+discriminator_loss_weight: 1
+d_obj_weight: 0.1
+ac_loss_weight: 0.1
+d_img_weight: 1
+l1_pixel_loss_weight: 1
+bbox_pred_loss_weight: 50
+
+# meta learning
+learning_rate: 0.0001
+meta_learning_rate: 1
+meta_inner_epochs: 10

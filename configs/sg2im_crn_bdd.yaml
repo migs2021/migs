@@ -1,0 +1,24 @@
+# Uses original Johnson SG2Im model
+# For training on BDD100k dataset
+seed: 1
+gpu: 0
+
+# DATA OPTIONS
+dataset: bdd
+coco_train_image_dir: /path_to_bdd100k_dataset/bdd100k/images/100k/train
+coco_val_image_dir: /path_to_bdd100k_dataset/bdd100k/images/100k/train
+coco_train_instances_json: /path_to_bdd_labels/BDD_labels//bdd100k_meta_train.json
+coco_val_instances_json: /path_to_bdd_labels/BDD_labels//bdd100k_meta_val.json
+coco_no_mask: True
+
+output_dir: checkpoints_sg2im_crn_bdd/
+num_iterations: 180000
+log_dir: runs/sg2im_crn_bdd
+restore_from_checkpoint: 1
+batch_size: 16
+image_size:  !!python/tuple [128, 256]
+checkpoint_every: 2000
+layout_size: !!python/tuple [32, 32]
+
+use_crn: True
+path_to_tmp_fid: fid/sg2im_crn_bdd

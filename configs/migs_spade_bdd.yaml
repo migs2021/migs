@@ -1,0 +1,41 @@
+# Meta learning on BDDK with SPADE generator and multi-scale discriminator
+
+seed: 5
+gpu: 0
+meta: 1
+
+# DATA OPTIONS
+dataset: bdd
+coco_train_image_dir: /path_to_bdd100k_dataset/bdd100k/images/100k/train
+coco_val_image_dir: /path_to_bdd100k_dataset/bdd100k/images/100k/train
+meta_base_dst_path: /path_to_bdd_labels/BDD_labels/
+
+coco_no_mask: True
+output_dir: checkpoints_migs_spade_bdd/
+num_iterations: 40000
+log_dir: runs/migs_spade_bdd
+path_to_tmp_fid: fid/migs_spade_bdd
+restore_from_checkpoint: 1
+batch_size: 8
+image_size:  !!python/tuple [128, 256]
+checkpoint_every: 1000
+eval_every: 3000
+layout_size: !!python/tuple [32, 32]
+
+# Losses weights
+percept_weight: 5
+
+# Spade options
+spade_gen_blocks: True
+multi_discriminator: True
+discriminator_loss_weight: 1
+d_obj_weight: 0.1
+ac_loss_weight: 0.1
+d_img_weight: 1
+l1_pixel_loss_weight: 1
+bbox_pred_loss_weight: 50
+
+# meta learning
+learning_rate: 0.0001
+meta_learning_rate: 1
+meta_inner_epochs: 10

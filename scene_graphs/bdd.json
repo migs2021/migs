@@ -1,0 +1,45 @@
+[
+    {
+    "objects": [
+      "car", "car"
+    ],
+    "relationships": [
+      [0, "left of", 1]
+    ]
+  },
+
+
+    {
+    "objects": [
+      "car",  "car", "car", "truck"
+    ],
+    "relationships": [
+      [0, "left of", 1],
+      [1, "left of", 2],
+      [1, "below", 3]
+    ]
+  },
+
+    {
+    "objects": [
+      "car", "car", "car"
+    ],
+    "relationships": [
+      [0, "left of", 1],
+      [1, "below", 2],
+      [1, "right of", 2],
+      [2, "right of", 0]
+    ]
+  },
+
+  {
+    "objects": [
+      "car", "car", "car"
+    ],
+    "relationships": [
+      [0, "left of", 1],
+      [1, "below", 2],
+      [1, "left of", 2]
+    ]
+  }
+]

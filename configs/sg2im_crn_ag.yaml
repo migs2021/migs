@@ -1,0 +1,25 @@
+# Uses original Johnson SG2Im model
+# For training on action genome
+seed: 1
+gpu: 0
+
+# DATA OPTIONS
+dataset: ag
+
+ag_image_dir: /path_to_extracted_charade_frames/charade_frames
+ag_train_annotation_json: /path_to_ag_labels/AG_labels/train_annots.json
+ag_val_annotation_json: /path_to_ag_labels/AG_labels/val_annots.json
+ag_obj_classes_file: /path_to_ag_labels/AG_labels/object_classes.txt
+ag_rel_classes_file: /path_to_ag_labels/AG_labels/relationship_classes.txt
+coco_no_mask: True
+output_dir: checkpoints_sg2im_crn_ag/
+num_iterations: 150000
+log_dir: runs/sg2im_crn_ag
+restore_from_checkpoint: 1
+batch_size: 32
+image_size:  !!python/tuple [128, 128]
+checkpoint_every: 2000
+layout_size: !!python/tuple [32, 32]
+
+use_crn: True
+path_to_tmp_fid: fid/sg2im_crn_ag

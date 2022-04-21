@@ -1,0 +1,40 @@
+# Sg2im with SPADE and multi scale discriminator
+# Trained on Action genome dataset
+
+seed: 1
+gpu: 0
+
+# DATA OPTIONS
+dataset: vg
+
+vg_image_dir: '/media/azadef/MyHDD/Code/GANs/SIMSG/sg2im/datasets/vg/images'
+meta_base_dst_path: '/media/azadef/MyHDD/Code/GANs/SIMSG/sg2im/datasets/vg'
+#ag_train_annotation_json: /path_to_ag_labels/AG_labels/train_annots.json
+#ag_val_annotation_json: /path_to_ag_labels/AG_labels/val_annots.json
+#ag_obj_classes_file: /path_to_ag_labels/AG_labels/object_classes.txt
+#ag_rel_classes_file: /path_to_ag_labels/AG_labels/relationship_classes.txt
+
+coco_no_mask: True
+output_dir: checkpoints_sg2im_spade_vg/
+num_iterations: 250000
+log_dir: runs/sg2im_spade_vg
+restore_from_checkpoint: 1
+batch_size: 50
+image_size:  !!python/tuple [64, 64]
+checkpoint_every: 2000
+layout_size: !!python/tuple [32, 32]
+
+# Losses weights
+percept_weight: 5
+
+# Spade options
+spade_gen_blocks: True
+multi_discriminator: True
+discriminator_loss_weight: 1
+d_obj_weight: 0.1
+ac_loss_weight: 0.1
+d_img_weight: 1
+l1_pixel_loss_weight: 1
+bbox_pred_loss_weight: 50
+
+path_to_tmp_fid: fid/sg2im_spade_vg

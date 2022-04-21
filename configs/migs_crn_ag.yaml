@@ -1,0 +1,34 @@
+# Uses original Johnson SG2Im model with meta learning
+# For training on action genome
+
+seed: 15
+gpu: 0
+meta: 1
+
+# DATA OPTIONS
+dataset: ag
+
+ag_image_dir: /path_to_extracted_charade_frames/charade_frames
+meta_base_dst_path: /path_to_ag_labels/AG_labels/ag_meta_labels/
+ag_obj_classes_file: /path_to_ag_labels/AG_labels/object_classes.txt
+ag_rel_classes_file: /path_to_ag_labels/AG_labels/relationship_classes.txt
+
+coco_no_mask: True
+output_dir: checkpoints_migs_crn_ag/
+num_iterations: 30000
+log_dir: runs/migs_crn_ag
+restore_from_checkpoint: 1
+batch_size: 16
+image_size:  !!python/tuple [128, 256]
+checkpoint_every: 1000
+eval_every: 3000
+layout_size: !!python/tuple [32, 32]
+
+use_crn: True
+path_to_tmp_fid: fid/migs_crn_ag
+
+# meta learning
+learning_rate: 0.0001
+meta_learning_rate: 1
+meta_inner_epochs: 10
+
