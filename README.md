@@ -1,6 +1,6 @@
 # MIGS
 
-This is the code for the paper "MIGS: Meta Image Generation from Scene Graphs"
+This is the code for the paper ["MIGS: Meta Image Generation from Scene Graphs"](https://arxiv.org/pdf/2110.11918.pdf)
 
 This code is build upon SG2Im work, the code for which might be found here: https://github.com/google/sg2im
 
