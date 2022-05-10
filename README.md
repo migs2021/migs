@@ -1,8 +1,25 @@
 # MIGS
 
-This is the code for the paper "MIGS: Meta Image Generation from Scene Graphs"
+This is the code for the paper "MIGS: Meta Image Generation from Scene Graphs" Published in BMVC 2021.
+
+<a href="https://arxiv.org/abs/2110.11918">Link to arXiv</a>
+
+<a href="https://www.bmvc2021-virtualconference.com/assets/papers/1435.pdf">Link to BMVC article</a>
+
+Authors: <a href="https://www.in.tum.de/campar/members/azade-farshad/">A. Farshad*</a>, S. Musatian*, <a href="https://campar.in.tum.de/Main/HelisaDhamo">H. Dhamo</a>, <a href="https://www.in.tum.de/campar/members/cv-nassir-navab/nassir-navab/">N. Navab</a>
 
 This code is build upon SG2Im work, the code for which might be found here: https://github.com/google/sg2im
+
+## Citation
+If you find this code useful in your research then please cite:
+```
+@inproceedings{farshad2021_MIGS,
+	    title={MIGS: Meta Image Generation from Scene Graphs},
+	    author={Farshad, Azade and Musatian, Sabrina and Dhamo, Helisa and Navab, Nassir},
+	    booktitle={BMVC},
+	    year={2021}
+	  }
+```
 
 ## Setup
 You can setup a virtual environment to run the code like this:
@@ -58,4 +75,5 @@ python scripts/run_model.py \
 ```
 
 The generated images will be saved to the directory specified by the `--output_dir` flag. 
+
 
