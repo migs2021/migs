@@ -1,6 +1,7 @@
 # MIGS
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/migs-meta-image-generation-from-scene-graphs/image-generation-on-bdd100k-subsets)](https://paperswithcode.com/sota/image-generation-on-bdd100k-subsets?p=migs-meta-image-generation-from-scene-graphs)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/migs-meta-image-generation-from-scene-graphs/image-generation-on-visual-genome)](https://paperswithcode.com/sota/image-generation-on-visual-genome?p=migs-meta-image-generation-from-scene-graphs)	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/migs-meta-image-generation-from-scene-graphs/image-generation-from-scene-graphs-on-bdd100k)](https://paperswithcode.com/sota/image-generation-from-scene-graphs-on-bdd100k?p=migs-meta-image-generation-from-scene-graphs)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/migs-meta-image-generation-from-scene-graphs/image-generation-from-scene-graphs-on-visual)](https://paperswithcode.com/sota/image-generation-from-scene-graphs-on-visual?p=migs-meta-image-generation-from-scene-graphs)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/migs-meta-image-generation-from-scene-graphs/image-generation-from-scene-graphs-on-home)](https://paperswithcode.com/sota/image-generation-from-scene-graphs-on-home?p=migs-meta-image-generation-from-scene-graphs)
 
 This is the code for the paper "MIGS: Meta Image Generation from Scene Graphs" Published in BMVC 2021.
 
